@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" href="styling.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>counter: {{ counter }} {{ isGreater }}</p>
+        <button v-on:click="increase(2)">count up</button>
+        <button v-on:click="counter--">count down</button>
+    </div>
+
+    <div id="styling">
+        <div class="demo" v-bind:class="{red: isRed}" v-on:click="isRed = !isRed"></div>
+        <div class="demo" v-on:click="isRed = !isRed"></div>
+        <div class="demo"></div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="styling.js"></script>
+</body>
+
+</html>
