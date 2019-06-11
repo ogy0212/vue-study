@@ -18,9 +18,15 @@
     </div>
 
     <div id="styling">
+        <div class="demo" v-bind:class="redOrBlue" v-on:click="isRed = !isRed"></div>
         <div class="demo" v-bind:class="{red: isRed}" v-on:click="isRed = !isRed"></div>
-        <div class="demo" v-on:click="isRed = !isRed"></div>
-        <div class="demo"></div>
+        <div class="demo" v-bind:class="[color, {red :isRed}]"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
+        <hr>
+        <div class="demo" v-bind:style="{backgroundColor: color}"></div>
+        <div class="demo" v-bind:style="[myStyle, {height: width + 'px'}]"></div>
     </div>
 
     <script src="app.js"></script>
