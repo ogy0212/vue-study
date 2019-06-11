@@ -12,9 +12,14 @@
 
 <body>
     <div id="app">
-        <ul>
-            <li v-for="(ingredient, index) in ingredients" :key="index">idx: {{index}}, name: {{ingredient}}</li>
-        </ul>
+        <p v-if="show">you can see me</p>
+        <p v-else>hello again</p>
+        <template v-if="show">
+            <p>im in template</p>
+            <p>im in template 2</p>
+        </template>
+        <p v-show="show">do you also see me?</p>
+        <button @click="show = !show">nintendo switch</button>
     </div>
 
 
