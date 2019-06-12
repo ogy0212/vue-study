@@ -11,10 +11,22 @@
 </head>
 
 <body>
-    <div id="app">
+    <h id="app">
         <ul>
             <li v-for="(ingredient, index) in ingredients" :key="index">idx: {{index}}, name: {{ingredient}}</li>
         </ul>
+        <hr>
+        <ul>
+            <li v-for="person in persons">
+                <div v-for="(value, key, index) in person">{{key}}: {{value}} ({{index}})</div>
+            </li>
+        </ul>
+        <span v-for="x in 10">{{x}}</span>
+        <hr>
+        <template v-for="(ingredient, index) in ingredients">
+            <h1>{{ ingredient }}</h1>
+            <p>{{ index }}</p>
+        </template>
     </div>
 
 
